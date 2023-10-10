@@ -1,0 +1,134 @@
+<!-- res/layout/main_activity.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- Heading -->
+    <TextView
+        android:layout_marginBottom="12dp"
+        android:id="@+id/textViewHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="42dp"
+        android:textColor="@color/welcome_color"
+        android:textStyle="bold" />
+
+    <!-- Circle Image Views -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:gravity="center">
+
+        <!-- Image View 1 and Text View 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Circle Image View 1 -->
+            <ImageView
+                android:contextClickable="true"
+                android:id="@+id/circleImageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/client_img_ek2"
+                android:layout_margin="8dp"
+                android:contentDescription="Image 1" />
+
+            <!-- Text View 1 -->
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLIENT"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Image View 2 and Text View 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Circle Image View 2 -->
+            <ImageView
+                android:contextClickable="true"
+                android:id="@+id/circleImageView2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/client_img_ek2"
+                android:layout_margin="8dp"
+                android:contentDescription="Image 2" />
+
+            <!-- Text View 2 -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WORKER"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:gravity="center">
+
+        <!-- Mobile Number EditText -->
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:hint="Enter Email"
+            android:inputType="phone" />
+        <!-- Mobile Number EditText -->
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:hint="Enter Password"
+            android:inputType="phone" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:background="@color/welcome_color" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/registerNow"
+            android:text="Click to Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+</LinearLayout>
