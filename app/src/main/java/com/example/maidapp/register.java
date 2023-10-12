@@ -4,12 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +30,13 @@ public class register extends AppCompatActivity {
     FirebaseAuth mAuth;
     TextView textView;
     ProgressBar progressBar;
+    LinearLayout clientLayout;
+    LinearLayout workerLayout;
+    ImageView clientImageView;
+    ImageView workerImageview;
+    TextView clientTextView;
+    TextView workertextVie;
+    int flage=0;
     @Override
     public void onStart() {
         super.onStart();
@@ -44,12 +54,48 @@ public class register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         editTextEmail = findViewById(R.id.emailEditText);
-
         editTextPassword = findViewById(R.id.passwordEditText);
         buttonRegister = findViewById(R.id.registerButton);
         mAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
         textView = findViewById(R.id.loginNow);
+        clientTextView = findViewById(R.id.clienTextView);
+        workertextVie = findViewById(R.id.workerTextView);
+
+        // layout onclick code
+        clientLayout = findViewById(R.id.clientLayout);
+        workerLayout = findViewById(R.id.workerLayout);
+
+        // Imageview onclick code
+        clientImageView = findViewById(R.id.clientImageView);
+        workerImageview = findViewById(R.id.workerImageView);
+
+
+
+
+        clientImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                flage=1;
+                if(flage==1)
+                {
+                    clientLayout.setBackgroundResource(R.drawable.border_highlight);
+                    Toast.makeText(register.this, "Clicled on CLient Image", Toast.LENGTH_SHORT).show();
+                    workerLayout.setBackgroundResource(R.drawable.border_highlight_2);
+                }
+            }
+        });
+        workerImageview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                flage=1;
+                if(flage==1) {
+                    workerLayout.setBackgroundResource(R.drawable.border_highlight);
+                    clientLayout.setBackgroundResource(R.drawable.border_highlight_2);
+                    Toast.makeText(register.this, "Clicled on the worker Image", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override

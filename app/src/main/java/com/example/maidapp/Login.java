@@ -10,6 +10,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +30,13 @@ public class Login extends AppCompatActivity {
     FirebaseAuth mAuth;
     TextView textView;
     ProgressBar progressBar;
+    LinearLayout clientLayout;
+    LinearLayout workerLayout;
+    ImageView clientImageView;
+    ImageView workerImageview;
+    TextView clientTextView;
+    TextView workertextVie;
+    int flage=0;
     @Override
     public void onStart() {
         super.onStart();
@@ -52,6 +61,43 @@ public class Login extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         textView = findViewById(R.id.registerNow);
 
+        clientTextView = findViewById(R.id.clienTextView);
+        workertextVie = findViewById(R.id.workerTextView);
+
+        // layout onclick code
+        clientLayout = findViewById(R.id.clientLayout);
+        workerLayout = findViewById(R.id.workerLayout);
+
+        // Imageview onclick code
+        clientImageView = findViewById(R.id.clientImageView);
+        workerImageview = findViewById(R.id.workerImageView);
+
+
+
+
+        clientImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                flage=1;
+                if(flage==1)
+                {
+                    clientLayout.setBackgroundResource(R.drawable.border_highlight);
+                    Toast.makeText(Login.this, "Clicled on CLient Image", Toast.LENGTH_SHORT).show();
+                    workerLayout.setBackgroundResource(R.drawable.border_highlight_2);
+                }
+            }
+        });
+        workerImageview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                flage=1;
+                if(flage==1) {
+                    workerLayout.setBackgroundResource(R.drawable.border_highlight);
+                    clientLayout.setBackgroundResource(R.drawable.border_highlight_2);
+                    Toast.makeText(Login.this, "Clicled on the worker Image", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

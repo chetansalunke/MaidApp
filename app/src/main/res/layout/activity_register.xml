@@ -17,6 +17,16 @@
         android:textSize="42dp"
         android:textColor="@color/welcome_color"
         android:textStyle="bold" />
+    <TextView
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_marginTop="12dp"
+        android:id="@+id/chooseUserTextView"
+        android:text="Choose Account Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
 
     <!-- Circle Image Views -->
     <LinearLayout
@@ -28,6 +38,8 @@
 
         <!-- Image View 1 and Text View 1 -->
         <LinearLayout
+            android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+            android:id="@+id/clientLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -36,17 +48,17 @@
 
             <!-- Circle Image View 1 -->
             <ImageView
-                android:contextClickable="true"
-                android:id="@+id/circleImageView1"
+                android:id="@+id/clientImageView"
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/client_img_ek2"
+                android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:contentDescription="Image 1" />
+                android:contentDescription="Image 1"
+                android:contextClickable="true"
+                android:src="@drawable/client_img_ek2" />
 
             <!-- Text View 1 -->
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/clienTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CLIENT"
@@ -56,25 +68,27 @@
 
         <!-- Image View 2 and Text View 2 -->
         <LinearLayout
+            android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+            android:id="@+id/workerLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center">
 
-            <!-- Circle Image View 2 -->
+            <!-- Circle Image View 1 -->
             <ImageView
-                android:contextClickable="true"
-                android:id="@+id/circleImageView2"
+                android:id="@+id/workerImageView"
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/client_img_ek2"
+                android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:contentDescription="Image 2" />
+                android:contentDescription="Image 1"
+                android:contextClickable="true"
+                android:src="@drawable/client_img_ek2" />
 
-            <!-- Text View 2 -->
+            <!-- Text View 1 -->
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/workerTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="WORKER"
@@ -96,7 +110,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="12dp"
             android:hint="Enter Email"
-            android:inputType="phone" />
+            android:inputType="text" />
         <!-- Mobile Number EditText -->
         <EditText
             android:id="@+id/passwordEditText"
@@ -104,7 +118,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="12dp"
             android:hint="Enter Password"
-            android:inputType="phone" />
+            android:inputType="text" />
 
         <ProgressBar
             android:id="@+id/progressBar"
