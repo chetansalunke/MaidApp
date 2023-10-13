@@ -71,8 +71,6 @@ public class register extends AppCompatActivity {
         workerImageview = findViewById(R.id.workerImageView);
 
 
-
-
         clientImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
