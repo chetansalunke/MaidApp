@@ -1,10 +1,9 @@
 package com.example.maidapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class otp_verify extends AppCompatActivity {
+public class otpVerify extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
