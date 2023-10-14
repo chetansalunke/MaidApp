@@ -9,7 +9,6 @@
 
     <!-- Heading -->
 
-
     <!-- Circle Image Views -->
 
     <TextView
@@ -128,7 +127,7 @@
         <!-- Mobile Number EditText -->
         <EditText
             android:layout_margin="30dp"
-            android:padding="16dp"
+            android:padding="13dp"
             android:id="@+id/phoneNumberEditText"
             android:layout_width="match_parent"
             android:background="@drawable/border_highlight"
@@ -137,11 +136,7 @@
             android:hint="Enter Phone Number"
             android:inputType="number" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/registerButton"
@@ -150,11 +145,13 @@
             android:text="Get Otp"
             android:textColor="@color/white"
             android:background="@color/welcome_color" />
-
-
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
-    <!-- Mobile Number EditText -->
 
 
 </LinearLayout>

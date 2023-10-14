@@ -8,6 +8,6 @@ public class otpVerify extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_otp_verify);
+        setContentView(R.layout.activity_send_otp);
     }
 }
